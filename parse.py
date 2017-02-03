@@ -23,7 +23,10 @@ if len(sys.argv) == 3:
             print "Object "+sys.argv[2]+" not available"
             print text
         else:
-            print data[sys.argv[2]].strip()
+            try:
+                print data[sys.argv[2]].strip()
+            except:
+                print "no data for "+sys.argv[2]
     else:
         print "Instance type "+sys.argv[1] +" is not found" 
 else:    
