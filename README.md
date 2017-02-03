@@ -1,4 +1,6 @@
 # awsscrape
+Offline Version will download page if not already present local ...All request will be made to the local file
+
 Parses Data from  "http://www.ec2instances.info/?region=eu-central-1"
 
 This Python script will parse Data from ec2instances.info 
