@@ -17,7 +17,7 @@ apiname
 
 memory 
 
-computerunits 
+computeunits 
 
 vcpus 
 

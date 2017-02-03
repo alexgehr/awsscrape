@@ -24,7 +24,8 @@ if len(sys.argv) == 3:
             print text
         else:
             try:
-                print data[sys.argv[2]].strip()
+               if type(data[sys.argv[2]]) == str: 
+                   print data[sys.argv[2]].strip()
             except:
                 print "no data for "+sys.argv[2]
     else:
