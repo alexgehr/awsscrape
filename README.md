@@ -13,20 +13,35 @@ Usage: python parse.py ApiName object
 
 Valid objects are  
 name  
+
 apiname 
+
 memory 
+
 computerunits 
+
 vcpus 
+
 ecu-per-vcpu 
+
 storage 
+
 architecture 
+
 networkperf 
+
 ebs-max-bandwith  
+
 ebs-throughput 
+
 ebs-iops 
+
 maxips 
+
 enhanced-networking 
+
 vpc-only 
+
 linux-virtualization 
 
 
