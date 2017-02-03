@@ -13,6 +13,7 @@ if len(sys.argv) == 3:
         for line in handler:
             localdata+=line
         content=html.fromstring(localdata)
+        handler.close
     except IOError:
         print "file not found downloading..."
         try:
@@ -20,6 +21,7 @@ if len(sys.argv) == 3:
             page=requests.get(url)
             content=html.fromstring(page.content)
             handler.write(page.content)
+            handler.close
         except:
             raise
 
@@ -38,10 +40,10 @@ if len(sys.argv) == 3:
             print "Object "+sys.argv[2]+" not available"
             print text
         else:
-            try:
-                print data[sys.argv[2]].strip()
-            except:
-                print "no data for "+sys.argv[2]
+#            print data[sys.argv[2]]
+            if type(data[sys.argv[2]]) == str: 
+               print data[sys.argv[2]].strip()
+ 
     else:
         print "Instance type "+sys.argv[1] +" is not found" 
 else:    
