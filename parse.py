@@ -4,7 +4,7 @@ import sys
 
 localdata=""
 data={}
-text="""Example python parse.py t2.micro memory \nUsage: python parse.py <Api Name> <object>\nValid Objects are \nname\napiname\nmemory\ncomputerunits\nvcpus\necu-per-vcpu\nstorage\narchitecture\nnetworkperf\nebs-max-bandwith\nebs-throughput\nebs-iops\nmaxips\nenhanced-networking\nvpc-only\nlinux-virtualization\n """
+text="""Example python parse.py t2.micro memory \nUsage: python parse.py <Api Name> <object>\nValid Objects are \nname\napiname\nmemory\ncomputeunits\nvcpus\necu-per-vcpu\nstorage\narchitecture\nnetworkperf\nebs-max-bandwith\nebs-throughput\nebs-iops\nmaxips\nenhanced-networking\nvpc-only\nlinux-virtualization\n """
 url='http://www.ec2instances.info/?region=eu-central-1'
 
 if len(sys.argv) == 3:
