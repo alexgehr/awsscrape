@@ -1,16 +1,31 @@
 from lxml import html
 import requests
 import sys
-url='http://www.ec2instances.info/?region=eu-central-1'
+
+localdata=""
 data={}
 text="""Example python parse.py t2.micro memory \nUsage: python parse.py <Api Name> <object>\nValid Objects are \nname\napiname\nmemory\ncomputerunits\nvcpus\necu-per-vcpu\nstorage\narchitecture\nnetworkperf\nebs-max-bandwith\nebs-throughput\nebs-iops\nmaxips\nenhanced-networking\nvpc-only\nlinux-virtualization\n """
+url='http://www.ec2instances.info/?region=eu-central-1'
+
 if len(sys.argv) == 3:
-    #print "Parsing Data "+url+" for aws instance "+sys.argv[1]
-    page=requests.get(url)
-    content=html.fromstring(page.content)
+    try:
+        handler=open('index.html','r')
+        for line in handler:
+            localdata+=line
+        content=html.fromstring(localdata)
+    except IOError:
+        print "file not found downloading..."
+        try:
+            handler=open('index.html','w')
+            page=requests.get(url)
+            content=html.fromstring(page.content)
+            handler.write(page.content)
+        except:
+            raise
+
+
     tmp="""//table[@class="table table-bordered table-hover table-condensed"]/tbody/tr[@id="%s"]"""
     path = tmp % sys.argv[1]
-    #table=content.xpath('//table[@class="table table-bordered table-hover table-condensed"]/tbody/tr[@id="m1.small"]')
     table=content.xpath(path)
     for tr in table:
         for td in tr.getchildren():
