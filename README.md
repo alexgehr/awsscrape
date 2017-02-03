@@ -11,22 +11,22 @@ Example: python parse.py t2.micro memory
 
 Usage: python parse.py ApiName object
 
-Valid objects are </br> 
-name </br> 
-apiname </br>
-memory </br>
-computerunits </br>
-vcpus </br>
-ecu-per-vcpu </br>
-storage </br>
-architecture </br>
-networkperf </br>
-ebs-max-bandwith  </br>
-ebs-throughput </br>
-ebs-iops </br>
-maxips </br>
-enhanced-networking </br>
-vpc-only </br>
-linux-virtualization </br>
+Valid objects are  
+name  
+apiname 
+memory 
+computerunits 
+vcpus 
+ecu-per-vcpu 
+storage 
+architecture 
+networkperf 
+ebs-max-bandwith  
+ebs-throughput 
+ebs-iops 
+maxips 
+enhanced-networking 
+vpc-only 
+linux-virtualization 
 
 
