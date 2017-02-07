@@ -5,7 +5,7 @@ This Python script will parse Data from ec2instances.info
 
 requires lxml, requests 
 
-Usage: python parse.py ApiName object
+Usage: python parse_ec2instances_info.py apiname object
 
 Example: python parse.py t2.micro memory 
 
