@@ -3,7 +3,7 @@ Parses Data from  "http://www.ec2instances.info/?region=eu-central-1"
 
 This Python script will parse Data from ec2instances.info 
 
-requires lxml 
+requires lxml, requests 
 
 Usage: python parse.py ApiName object
 
