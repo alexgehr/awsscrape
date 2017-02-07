@@ -1,6 +1,4 @@
 # awsscrape
-Parses Data from  "http://www.ec2instances.info/?region=eu-central-1"
-
 This Python script will parse Data from ec2instances.info 
 
 requires lxml, requests 
@@ -9,8 +7,8 @@ Usage: python parse_ec2instances_info.py apiname object
 
 Example: python parse.py t2.micro memory 
 
-
 Valid objects are  
+
 name  
 
 apiname 
